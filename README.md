@@ -12,12 +12,12 @@
 
 ### 👋 About Me
 
-Professional developer with a deep passion for **AI engineering**, **agentic systems**, and **GPU-level optimization**. I build tools at the intersection of large language models and developer productivity — from MCP servers to local inference pipelines and Claude Code plugins.
+Passionate and curious builder driven by **AI evolution in software engineering** and **large-scale company transformation**. I love discovering new ideas, sharing findings, and improving systems to be resilient and efficient — always with a solution-focused, entrepreneurial mindset.
 
 - 🔭 **Currently:** Running local LLMs (Ornith, Qwen) on RTX 5080 via custom llama.cpp builds
-- 🧠 **Specializing in:** Agent frameworks, MCP tool servers, CUDA optimization, RL for games
-- 🌱 **Exploring:** Speculative decoding, KV cache optimization, self-scaffolding models
-- ⚡ **Philosophy:** Ship fast, benchmark everything, iterate
+- 🧠 **Specializing in:** Agentic systems, MCP tool servers, local inference pipelines
+- 🌱 **Exploring:** AI-native developer tooling, enterprise AI adoption patterns
+- ⚡ **Philosophy:** Ship fast, benchmark everything, iterate — and share what you learn
 
 ---
 
@@ -123,16 +123,18 @@ Professional developer with a deep passion for **AI engineering**, **agentic sys
 
 ---
 
-### 📊 GitHub Stats
+### 🏠 Local AI Stack
 
 <div align="center">
 
-<a href="https://github.com/guenichone">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=guenichone&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&rank_icon=github" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs?username=guenichone&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
-</a>
-
-<img src="https://streak-stats.demolab.com/?user=guenichone&theme=tokyonight&hide_border=true" />
+| Tool | Purpose |
+|:---|:---|
+| **Headroom** | Local LLM inference manager & model server |
+| **Superpower** | AI-powered terminal & CLI augmentation |
+| **Serena** | Semantic code search & context engine |
+| **Graphify** | Knowledge graph builder & vector memory |
+| **Caveman** | Local MCP server & tool orchestration |
+| **Poneytail** | Lightweight prompt framework & chain runner |
 
 </div>
 
@@ -144,7 +146,6 @@ Professional developer with a deep passion for **AI engineering**, **agentic sys
 
 <a href="https://github.com/guenichone"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 <a href="https://www.linkedin.com/in/emilien-guenichon-9b127629/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-<a href="mailto:emilien.guenichon@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 
 </div>
 
