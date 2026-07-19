@@ -27,6 +27,13 @@ Professional developer with a deep passion for **AI engineering**, **agentic sys
 
 <img src="https://skillicons.dev/icons?i=python,typescript,cpp,rust,java,godot,react,nextjs,tailwind,supabase,docker,linux,bash,git,github,vscode&perline=8" alt="Tech stack" />
 
+<br />
+
+<a href="https://claude.ai"><img src="https://img.shields.io/badge/Claude_Code-6366f1?style=flat&logo=claude&logoColor=white" alt="Claude Code" /></a>
+<a href="https://opencode.ai"><img src="https://img.shields.io/badge/OpenCode-6366f1?style=flat&logo=robot&logoColor=white" alt="OpenCode" /></a>
+<a href="https://github.com/ggml-org/llama.cpp"><img src="https://img.shields.io/badge/llama.cpp-FF6B35?style=flat&logo=llama&logoColor=white" alt="llama.cpp" /></a>
+<a href="https://developer.nvidia.com/cuda-toolkit"><img src="https://img.shields.io/badge/CUDA-76B900?style=flat&logo=nvidia&logoColor=white" alt="CUDA" /></a>
+
 </div>
 
 ---
@@ -122,10 +129,10 @@ Professional developer with a deep passion for **AI engineering**, **agentic sys
 
 <a href="https://github.com/guenichone">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=guenichone&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&rank_icon=github" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=guenichone&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&exclude_repo=guenichone.github.io" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs?username=guenichone&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
 </a>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=guenichone&theme=tokyonight&hide_border=true" />
+<img src="https://streak-stats.demolab.com/?user=guenichone&theme=tokyonight&hide_border=true" />
 
 </div>
 
@@ -136,6 +143,7 @@ Professional developer with a deep passion for **AI engineering**, **agentic sys
 <div align="center">
 
 <a href="https://github.com/guenichone"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+<a href="https://www.linkedin.com/in/emilien-guenichon-9b127629/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 <a href="mailto:emilien.guenichon@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 
 </div>
