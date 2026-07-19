@@ -2,6 +2,12 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=Emilien+Guenichon;AI+Engineer+%26+Explorer;Problem+Solver;Open+Source+Builder" alt="Typing SVG" />
 
+<br />
+
+<p>
+  <i>Building the future of AI-native software engineering — one agent, one model, one tool at a time.</i>
+</p>
+
 <a href="https://github.com/guenichone"><img src="https://komarev.com/ghpvc/?username=guenichone&label=Profile%20views&color=6366f1&style=flat" alt="Profile views" /></a>
 <a href="https://github.com/guenichone?tab=repositories"><img src="https://img.shields.io/badge/Repos-23-6366f1?style=flat&logo=github" alt="Repos" /></a>
 <a href="https://github.com/guenichone?tab=followers"><img src="https://img.shields.io/github/followers/guenichone?style=flat&color=6366f1&logo=github" alt="Followers" /></a>
@@ -50,6 +56,63 @@ Passionate and curious builder driven by **AI evolution in software engineering*
 | **Proxies** | free-claude-code · OpenRouter proxy · OpenAI-compatible bridge |
 | **MCP Servers** | Bitbucket MCP · yt-video-data · custom tool servers |
 | **GPU** | NVIDIA RTX 5080 · Blackwell sm_120 · CUDA 12.8 + 13.3 driver |
+
+</div>
+
+---
+
+### 🏠 Local AI Stack
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center" width="33%">
+  <a href="https://github.com/headroomlabs-ai/headroom">
+    <img src="https://img.shields.io/badge/Headroom-6366f1?style=for-the-badge&logo=robot&logoColor=white" alt="Headroom" />
+  </a>
+  <br />
+  <sub>Context compression for AI agents. 20% fewer tokens for coding, 60-95% for JSON — same answers. Library, proxy & MCP server.</sub>
+</td>
+<td align="center" width="33%">
+  <a href="https://github.com/obra/superpowers">
+    <img src="https://img.shields.io/badge/Superpowers-8B5CF6?style=for-the-badge&logo=robot&logoColor=white" alt="Superpowers" />
+  </a>
+  <br />
+  <sub>Agentic skills framework & software development methodology that works.</sub>
+</td>
+<td align="center" width="33%">
+  <a href="https://github.com/oraios/serena">
+    <img src="https://img.shields.io/badge/Serena-EC4899?style=for-the-badge&logo=robot&logoColor=white" alt="Serena" />
+  </a>
+  <br />
+  <sub>MCP toolkit for semantic code retrieval & editing — the IDE for your agent.</sub>
+</td>
+</tr>
+<tr>
+<td align="center" width="33%">
+  <a href="https://github.com/Graphify-Labs/graphify">
+    <img src="https://img.shields.io/badge/Graphify-10B981?style=for-the-badge&logo=robot&logoColor=white" alt="Graphify" />
+  </a>
+  <br />
+  <sub>Turn any folder of code, schemas, docs, or images into a queryable knowledge graph.</sub>
+</td>
+<td align="center" width="33%">
+  <a href="https://github.com/standardbeagle/caveman-mcp">
+    <img src="https://img.shields.io/badge/Caveman-F59E0B?style=for-the-badge&logo=robot&logoColor=white" alt="Caveman" />
+  </a>
+  <br />
+  <sub>MCP server: two-pass Wenyan compression for URLs, files, diffs, and logs.</sub>
+</td>
+<td align="center" width="33%">
+  <a href="https://github.com/DietrichGebert/ponytail">
+    <img src="https://img.shields.io/badge/Ponytail-EF4444?style=for-the-badge&logo=robot&logoColor=white" alt="Ponytail" />
+  </a>
+  <br />
+  <sub>Makes your AI agent think like the laziest senior dev — the best code is the code you never wrote.</sub>
+</td>
+</tr>
+</table>
 
 </div>
 
@@ -118,23 +181,6 @@ Passionate and curious builder driven by **AI evolution in software engineering*
 </td>
 </tr>
 </table>
-
-</div>
-
----
-
-### 🏠 Local AI Stack
-
-<div align="center">
-
-| Tool | Purpose |
-|:---|:---|
-| **Headroom** | Local LLM inference manager & model server |
-| **Superpower** | AI-powered terminal & CLI augmentation |
-| **Serena** | Semantic code search & context engine |
-| **Graphify** | Knowledge graph builder & vector memory |
-| **Caveman** | Local MCP server & tool orchestration |
-| **Poneytail** | Lightweight prompt framework & chain runner |
 
 </div>
 
