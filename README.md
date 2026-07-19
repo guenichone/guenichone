@@ -83,9 +83,7 @@
 
 </div>
 
-Hey, I'm Emilien. I build AI engineering tools — MCP servers, agent frameworks, CUDA-optimized inference stacks — and benchmark everything on my RTX 5080. I open-source the configs and findings so nobody else has to debug the same Blackwell compatibility issues I did.
-
-Curiosity drives me to explore what makes AI tooling actually useful in practice, and an entrepreneurial instinct pushes me to ship what works and share what doesn't.
+I'm a passionate and curious person, solution-focused and entrepreneurial. I love discovering new ideas, sharing findings, and improving systems to be resilient and efficient. Deeply focused on AI evolution in software engineering and large-scale company transformation.
 
 > **Now** — Building MCP servers for enterprise workflows · Optimizing Ornith & Qwen inference on Blackwell · Exploring RL for autonomous agents
 
