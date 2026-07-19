@@ -20,14 +20,10 @@
       <feGaussianBlur stdDeviation="4" result="blur" />
       <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
     </filter>
-    <filter id="softGlow">
-      <feGaussianBlur stdDeviation="30" />
-    </filter>
   </defs>
 
   <rect width="800" height="220" rx="20" fill="#0d1117" stroke="url(#g1)" stroke-width="1" opacity="0.9" />
 
-  <!-- animated bg circles -->
   <circle cx="150" cy="110" r="60" fill="url(#g1)" opacity="0.08">
     <animate attributeName="r" values="50;70;50" dur="6s" repeatCount="indefinite" />
     <animate attributeName="cx" values="150;170;150" dur="8s" repeatCount="indefinite" />
@@ -40,7 +36,6 @@
     <animate attributeName="r" values="30;45;30" dur="7s" repeatCount="indefinite" />
   </circle>
 
-  <!-- floating dots -->
   <circle cx="100" cy="40" r="2" fill="#6366f1">
     <animate attributeName="cy" values="40;30;40" dur="3s" repeatCount="indefinite" />
     <animate attributeName="opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite" />
@@ -58,15 +53,13 @@
     <animate attributeName="opacity" values="1;0.3;1" dur="4.5s" repeatCount="indefinite" />
   </circle>
 
-  <!-- name -->
   <text x="400" y="85" text-anchor="middle" fill="white" font-family="Segoe UI, sans-serif" font-size="38" font-weight="700" letter-spacing="2" filter="url(#glow)">
     Emilien Guenichon
   </text>
 
-  <!-- subtitle background highlight -->
   <rect x="170" y="115" width="460" height="28" rx="14" fill="url(#g1)" opacity="0.15" />
   <text x="400" y="135" text-anchor="middle" fill="#c4b5fd" font-family="monospace" font-size="14" font-weight="500">
-    AI Engineer &amp; Explorer  •  Open Source Builder
+    AI Engineer &amp; Explorer  ·  Open Source Builder
   </text>
 </svg>
 
@@ -82,13 +75,7 @@
 
 ---
 
-<div align="center">
-  <svg width="600" height="4" xmlns="http://www.w3.org/2000/svg">
-    <rect width="600" height="4" rx="2" fill="url(#g1)">
-      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite" />
-    </rect>
-  </svg>
-</div>
+<br />
 
 <div align="center">
 
@@ -96,12 +83,11 @@
 
 </div>
 
-Passionate and curious builder driven by **AI evolution in software engineering** and **large-scale company transformation**. I love discovering new ideas, sharing findings, and improving systems to be resilient and efficient — always with a solution-focused, entrepreneurial mindset.
+Hey, I'm Emilien. I build AI engineering tools — MCP servers, agent frameworks, CUDA-optimized inference stacks — and benchmark everything on my RTX 5080. I open-source the configs and findings so nobody else has to debug the same Blackwell compatibility issues I did.
 
-- 🔭 **Currently** — Running local LLMs (Ornith, Qwen) on RTX 5080 via custom llama.cpp builds
-- 🧠 **Specializing in** — Agentic systems, MCP tool servers, local inference pipelines
-- 🌱 **Exploring** — AI-native developer tooling, enterprise AI adoption patterns
-- ⚡ **Philosophy** — Ship fast, benchmark everything, iterate — and share what you learn
+Curiosity drives me to explore what makes AI tooling actually useful in practice, and an entrepreneurial instinct pushes me to ship what works and share what doesn't.
+
+> **Now** — Building MCP servers for enterprise workflows · Optimizing Ornith & Qwen inference on Blackwell · Exploring RL for autonomous agents
 
 ---
 
@@ -130,7 +116,7 @@ Passionate and curious builder driven by **AI evolution in software engineering*
 
 <div align="center">
 
-### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="28" /> Local AI Stack
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="28" /> Toolbox
 
 </div>
 
@@ -216,7 +202,7 @@ Passionate and curious builder driven by **AI evolution in software engineering*
 
 <div align="center">
 
-### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Books.png" width="28" /> Featured Projects
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Books.png" width="28" /> What I Build
 
 </div>
 
@@ -230,7 +216,7 @@ Passionate and curious builder driven by **AI evolution in software engineering*
   <img src="https://img.shields.io/github/license/guenichone/claude-config-benchmark?color=blue" />
 </a>
 
-Empirical benchmarking of Claude Code MCP configurations on real tasks. Isolated git worktrees, token cost, build/test pass-rate, LLM-judged quality.
+Isolated worktrees, token cost tracking, build/test pass-rates, LLM-judged quality — all automated. Find the config that actually ships.
 
 </td>
 <td width="50%" valign="top">
@@ -241,7 +227,7 @@ Empirical benchmarking of Claude Code MCP configurations on real tasks. Isolated
   <img src="https://img.shields.io/badge/CUDA-12.8-76B900?style=flat&logo=nvidia&logoColor=white" />
 </a>
 
-Curated configs & benchmarks for local LLMs on RTX 5080 (16GB). Blackwell CUDA workarounds, llama.cpp flags, quant comparison.
+Battle-tested llama.cpp configs for RTX 5080. CUDA 12.8 workarounds, server flags, model quant comparisons.
 
 </td>
 </tr>
@@ -255,7 +241,7 @@ Curated configs & benchmarks for local LLMs on RTX 5080 (16GB). Blackwell CUDA w
   <img src="https://img.shields.io/github/stars/guenichone/atlassian-bitbucket-server-mcp?color=yellow" />
 </a>
 
-MCP server for self-hosted Bitbucket. AI agents interact with PRs, repos, and code reviews through Model Context Protocol.
+Give AI agents access to self-hosted Bitbucket. PR reviews, repo browsing, code reviews — all through MCP.
 
 </td>
 <td width="50%" valign="top">
@@ -267,7 +253,7 @@ MCP server for self-hosted Bitbucket. AI agents interact with PRs, repos, and co
   <img src="https://img.shields.io/github/stars/guenichone/brotatoai?color=yellow" />
 </a>
 
-AI mod for Brotato using Stable-Baselines3. Trains RL agents to play autonomously via Gymnasium environments.
+An RL agent that plays Brotato by itself. Stable-Baselines3 + Gymnasium. Because games are the best testbed for AI.
 
 </td>
 </tr>
@@ -280,7 +266,7 @@ AI mod for Brotato using Stable-Baselines3. Trains RL agents to play autonomousl
   <img src="https://img.shields.io/badge/Claude_Code-Plugin-6366f1?style=flat" />
 </a>
 
-Claude Code plugin marketplace. Ships yt-video-data skill for YouTube transcripts & metadata.
+Plugin marketplace for Claude Code. Distributes yt-video-data skill — YouTube transcripts & metadata, no API keys needed.
 
 </td>
 <td width="50%" valign="top">
@@ -292,7 +278,7 @@ Claude Code plugin marketplace. Ships yt-video-data skill for YouTube transcript
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black" />
 </a>
 
-Full-stack web app built with React, Tailwind, shadcn/ui, and Supabase. Modern component library with DB-backed ops.
+Full-stack app. React, Tailwind, shadcn/ui, Supabase. Modern components with database-backed operations.
 
 </td>
 </tr>
