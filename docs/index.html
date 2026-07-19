@@ -1,353 +1,383 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Emilien Guenichon — AI Engineer</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #08080c;
-    --surface: #111118;
-    --surface2: #181825;
-    --text: #e2e2ec;
-    --text2: #9b9bb8;
-    --indigo: #6366f1;
-    --purple: #8b5cf6;
-    --pink: #ec4899;
-    --cyan: #06b6d4;
-    --green: #10b981;
-    --amber: #f59e0b;
-    --red: #ef4444;
-    --g1: linear-gradient(135deg, var(--indigo), var(--purple), var(--pink));
-    --g2: linear-gradient(135deg, var(--pink), var(--indigo), var(--cyan));
-    --g3: linear-gradient(135deg, var(--cyan), var(--green));
-    --radius: 16px;
-    --radius-sm: 10px;
-  }
+:root {
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+  --bg: #000000;
+  --bg-elevated: #111111;
+  --bg-card: rgba(28,28,30,0.72);
+  --text: #f5f5f7;
+  --text-secondary: #a1a1aa;
+  --text-tertiary: #6b6b76;
+  --border: rgba(255,255,255,0.08);
+  --border-hover: rgba(255,255,255,0.14);
+  --indigo: #6366f1;
+  --purple: #8b5cf6;
+  --pink: #ec4899;
+  --cyan: #06b6d4;
+  --green: #10b981;
+  --amber: #f59e0b;
+  --red: #ef4444;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 24px rgba(0,0,0,0.5);
+  --radius: 20px;
+  --radius-sm: 12px;
+  --transition: 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+[data-theme="light"] {
+  --bg: #f5f5f7;
+  --bg-elevated: #ffffff;
+  --bg-card: rgba(255,255,255,0.72);
+  --text: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --text-tertiary: #aeaeb2;
+  --border: rgba(0,0,0,0.08);
+  --border-hover: rgba(0,0,0,0.14);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 24px rgba(0,0,0,0.08);
+}
 
-  html { scroll-behavior: smooth; }
+[data-theme="unicorn"] {
+  --bg: #0a0014;
+  --bg-elevated: #120024;
+  --bg-card: rgba(30,0,50,0.72);
+  --text: #ffe8ff;
+  --text-secondary: #d4b8e8;
+  --text-tertiary: #8a6ba0;
+  --border: rgba(255,100,255,0.15);
+  --border-hover: rgba(255,100,255,0.3);
+  --indigo: #ff69b4;
+  --purple: #da70d6;
+  --pink: #ff1493;
+  --cyan: #00ffff;
+  --green: #39ff14;
+  --amber: #ffd700;
+  --red: #ff4500;
+  --shadow-sm: 0 1px 3px rgba(255,0,200,0.15);
+  --shadow-md: 0 4px 30px rgba(255,0,200,0.2);
+}
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Inter', system-ui, sans-serif;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
-  /* ---- ANIMATED BACKGROUND ---- */
-  .bg-orbs {
-    position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
-  }
-  .bg-orbs::before {
-    content: ''; position: absolute;
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%);
-    top: -200px; left: -100px;
-    animation: floatA 12s ease-in-out infinite;
-    border-radius: 50%;
-  }
-  .bg-orbs::after {
-    content: ''; position: absolute;
-    width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(236,72,153,0.12) 0%, transparent 70%);
-    bottom: -150px; right: -100px;
-    animation: floatB 14s ease-in-out infinite;
-    border-radius: 50%;
-  }
-  @keyframes floatA {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(60px, 40px) scale(1.1); }
-    66% { transform: translate(-30px, -30px) scale(0.9); }
-  }
-  @keyframes floatB {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(-50px, -30px) scale(1.15); }
-    66% { transform: translate(40px, 20px) scale(0.85); }
-  }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background var(--transition), color var(--transition);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
 
-  .extra-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(60px);
-    opacity: 0.12;
-    pointer-events: none;
-  }
+/* ---- CANVAS PARTICLES ---- */
+#particles {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+}
 
-  /* ---- GRID LINES ---- */
-  .grid-overlay {
-    position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.03;
-    background-image:
-      linear-gradient(rgba(200,200,255,0.5) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(200,200,255,0.5) 1px, transparent 1px);
-    background-size: 80px 80px;
-    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
-  }
+/* ---- NAV ---- */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: var(--bg); transition: background var(--transition);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, background var(--transition);
+}
+nav.scrolled {
+  border-bottom-color: var(--border);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+nav .inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 52px;
+}
+nav .logo {
+  font-family: var(--mono); font-weight: 700; font-size: 17px;
+  background: linear-gradient(135deg, var(--indigo), var(--purple));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: opacity 0.3s;
+}
+nav .nav-links { display: flex; gap: 32px; align-items: center; }
+nav .nav-links a {
+  color: var(--text-secondary); text-decoration: none;
+  font-size: 13px; font-weight: 500; letter-spacing: 0.3px;
+  transition: color 0.2s;
+}
+nav .nav-links a:hover { color: var(--text); }
+.theme-toggle {
+  background: none; border: 1px solid var(--border);
+  color: var(--text-secondary); cursor: pointer;
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; transition: all 0.3s;
+  margin-left: 8px;
+}
+.theme-toggle:hover { border-color: var(--border-hover); color: var(--text); }
 
-  /* ---- CONTAINER ---- */
-  .wrapper {
-    position: relative; z-index: 1;
-    max-width: 1100px; margin: 0 auto; padding: 0 24px;
-  }
+/* ---- HERO ---- */
+.hero {
+  min-height: 100vh; display: flex; align-items: center;
+  justify-content: center; text-align: center;
+  position: relative; padding: 80px 24px 60px;
+}
+.hero .inner { position: relative; z-index: 1; max-width: 700px; }
+.hero .eyebrow {
+  font-family: var(--mono); font-size: 13px; font-weight: 500;
+  color: var(--indigo); letter-spacing: 3px; text-transform: uppercase;
+  margin-bottom: 24px; opacity: 0;
+  animation: fadeUp 0.8s 0.1s forwards;
+}
+.hero h1 {
+  font-size: clamp(40px, 8vw, 80px); font-weight: 900;
+  letter-spacing: -2px; line-height: 1.05; margin-bottom: 20px;
+  background: linear-gradient(135deg, var(--indigo), var(--purple), var(--pink));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease infinite, fadeUp 0.8s 0.2s forwards;
+  opacity: 0;
+}
+.hero .tagline {
+  font-size: 19px; color: var(--text-secondary); font-weight: 400;
+  max-width: 500px; margin: 0 auto 36px;
+  opacity: 0; animation: fadeUp 0.8s 0.35s forwards;
+}
+.hero .badges {
+  display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;
+  opacity: 0; animation: fadeUp 0.8s 0.5s forwards;
+}
+.hero .badges img { height: 24px; }
+.hero .scroll-hint {
+  position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+  color: var(--text-tertiary); font-size: 11px; letter-spacing: 2px;
+  text-transform: uppercase; opacity: 0;
+  animation: fadeUp 0.8s 0.8s forwards, bounceHint 2s 1.5s infinite;
+}
 
-  /* ---- NAV ---- */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(8,8,12,0.8);
-    backdrop-filter: blur(20px) saturate(120%);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    padding: 14px 0;
-  }
-  nav .wrapper {
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  nav .logo {
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 700; font-size: 18px;
-    background: var(--g1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  nav .links { display: flex; gap: 28px; }
-  nav .links a {
-    color: var(--text2); text-decoration: none;
-    font-size: 14px; font-weight: 500;
-    transition: color 0.2s;
-  }
-  nav .links a:hover { color: var(--text); }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes bounceHint {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
 
-  /* ---- HERO ---- */
-  .hero {
-    min-height: 90vh; display: flex; align-items: center;
-    text-align: center; padding: 120px 0 80px;
-    position: relative;
-  }
-  .hero-orb {
-    position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.18;
-    pointer-events: none;
-  }
-  .hero-orb.a { width: 400px; height: 400px; background: var(--indigo); top: 10%; left: 50%; transform: translateX(-50%);
-    animation: heroPulse 6s ease-in-out infinite; }
-  .hero-orb.b { width: 250px; height: 250px; background: var(--pink); top: 40%; right: 15%;
-    animation: heroPulse 8s ease-in-out infinite reverse; }
-  .hero-orb.c { width: 200px; height: 200px; background: var(--cyan); bottom: 20%; left: 15%;
-    animation: heroPulse 7s ease-in-out infinite; }
-  @keyframes heroPulse {
-    0%, 100% { transform: scale(1); opacity: 0.18; }
-    50% { transform: scale(1.25); opacity: 0.3; }
-  }
+/* ---- SECTIONS ---- */
+section { padding: 120px 24px; position: relative; z-index: 1; }
+.section-inner { max-width: 1000px; margin: 0 auto; }
+.section-eyebrow {
+  font-family: var(--mono); font-size: 12px; font-weight: 600;
+  color: var(--indigo); letter-spacing: 2px; text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.section-title {
+  font-size: clamp(28px, 5vw, 48px); font-weight: 800;
+  letter-spacing: -1px; line-height: 1.15; margin-bottom: 16px;
+}
+.section-subtitle {
+  font-size: 17px; color: var(--text-secondary); line-height: 1.7;
+  max-width: 560px; margin-bottom: 56px;
+}
 
-  .hero h1 {
-    font-size: clamp(36px, 7vw, 72px); font-weight: 900; letter-spacing: -1px;
-    background: var(--g1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    background-clip: text; line-height: 1.1; margin-bottom: 16px;
-  }
-  .hero .subtitle {
-    font-size: clamp(16px, 3vw, 22px); color: var(--text2);
-    font-family: 'JetBrains Mono', monospace; margin-bottom: 12px;
-  }
-  .hero .tagline {
-    font-size: 15px; color: rgba(200,200,240,0.5);
-    max-width: 500px; margin: 0 auto 32px;
-  }
-  .hero-badges { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-  .hero-badges img { height: 24px; }
+/* ---- CARDS ---- */
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px;
+  transition: all 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+  box-shadow: var(--shadow-sm);
+  position: relative; overflow: hidden;
+}
+.card::after {
+  content: ''; position: absolute; inset: 0; border-radius: var(--radius);
+  opacity: 0; transition: opacity 0.35s;
+  background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(99,102,241,0.06), transparent 40%);
+}
+.card:hover { border-color: var(--border-hover); box-shadow: var(--shadow-md); }
+.card:hover::after { opacity: 1; }
 
-  /* ---- SECTION ---- */
-  section { padding: 80px 0; }
-  .section-label {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: 13px; font-weight: 600; text-transform: uppercase;
-    letter-spacing: 2px; color: var(--indigo);
-    border: 1px solid rgba(99,102,241,0.3);
-    border-radius: 20px; padding: 4px 14px; margin-bottom: 16px;
-    background: rgba(99,102,241,0.06);
-  }
-  .section-title {
-    font-size: clamp(28px, 5vw, 42px); font-weight: 800; letter-spacing: -0.5px;
-    background: var(--g1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    background-clip: text; margin-bottom: 24px;
-  }
-  .section-subtitle {
-    font-size: 17px; color: var(--text2); max-width: 600px;
-    line-height: 1.8; margin-bottom: 48px;
-  }
+.card-grid { display: grid; gap: 20px; }
 
-  /* ---- GLASS CARD ---- */
-  .glass {
-    background: rgba(24,24,37,0.6);
-    backdrop-filter: blur(24px) saturate(140%);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: var(--radius); padding: 32px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  }
-  .glass:hover {
-    transform: translateY(-4px);
-    border-color: rgba(99,102,241,0.25);
-    box-shadow: 0 8px 40px rgba(99,102,241,0.08), 0 0 0 1px rgba(99,102,241,0.05) inset;
-  }
+/* ---- ABOUT ---- */
+.about-text { font-size: 19px; line-height: 1.85; color: var(--text-secondary); }
+.about-text strong { color: var(--text); font-weight: 600; }
+.now-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 28px; font-size: 13px; color: var(--text-secondary);
+  background: color-mix(in srgb, var(--indigo) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--indigo) 20%, transparent);
+  border-radius: 20px; padding: 8px 18px;
+  font-family: var(--mono);
+}
+.now-pill .dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--indigo);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 var(--indigo); }
+  50% { opacity: 0.6; box-shadow: 0 0 0 8px transparent; }
+}
 
-  /* ---- ABOUT ---- */
-  .about-text {
-    font-size: 18px; line-height: 1.9; color: var(--text2);
-  }
-  .about-text strong { color: var(--text); }
-  .now-bar {
-    display: flex; align-items: flex-start; gap: 12px;
-    margin-top: 24px; font-size: 14px; color: var(--text2);
-    padding: 16px 20px;
-    background: rgba(99,102,241,0.05);
-    border-left: 2px solid var(--indigo);
-    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  }
-  .now-bar .label {
-    font-weight: 700; color: var(--indigo);
-    font-family: 'JetBrains Mono', monospace;
-    white-space: nowrap;
-  }
+/* ---- TECHS ---- */
+.tech-icons { display: flex; flex-wrap: wrap; justify-content: center; }
+.tech-icons img { height: 40px; border-radius: 6px; }
+.tools-row {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+  margin-top: 20px;
+}
+.tools-row img { height: 32px; }
 
-  /* ---- TECH BADGES ---- */
-  .tech-grid {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
-  }
-  .tech-grid img { height: 40px; border-radius: 6px; }
+/* ---- TOOLBOX ---- */
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 16px;
+}
+.tool-card .shield img { height: 32px; border-radius: 6px; }
+.tool-card h4 { font-size: 17px; font-weight: 700; margin: 14px 0 6px; }
+.tool-card .desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 10px; }
+.tool-card .repo { font-family: var(--mono); font-size: 12px; }
+.tool-card .repo a { color: var(--text-tertiary); text-decoration: none; transition: color 0.2s; }
+.tool-card .repo a:hover { color: var(--indigo); }
+.tool-card .accent {
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  opacity: 0; transition: opacity 0.35s;
+}
+.tool-card:hover .accent { opacity: 1; }
 
-  /* ---- TOOLBOX GRID ---- */
-  .tool-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
-  .tool-card {
-    text-align: center; position: relative; overflow: hidden;
-  }
-  .tool-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    opacity: 0; transition: opacity 0.3s;
-  }
-  .tool-card:nth-child(1)::before { background: var(--indigo); }
-  .tool-card:nth-child(2)::before { background: var(--purple); }
-  .tool-card:nth-child(3)::before { background: var(--pink); }
-  .tool-card:nth-child(4)::before { background: var(--green); }
-  .tool-card:nth-child(5)::before { background: var(--amber); }
-  .tool-card:nth-child(6)::before { background: var(--red); }
-  .tool-card:hover::before { opacity: 1; }
-  .tool-card .badge-link img { height: 32px; border-radius: 6px; margin-bottom: 12px; }
-  .tool-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
-  .tool-card .desc { font-size: 14px; color: var(--text2); line-height: 1.6; margin-bottom: 8px; }
-  .tool-card .repo { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: rgba(255,255,255,0.25); }
-  .tool-card .repo a { color: inherit; text-decoration: none; transition: color 0.2s; }
-  .tool-card .repo a:hover { color: var(--indigo); }
+/* ---- PROJECTS ---- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  gap: 16px;
+}
+.project-card h4 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+.project-card .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.project-card .badges img { height: 22px; }
+.project-card .desc { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
 
-  /* ---- PROJECT GRID ---- */
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 20px;
-  }
-  .project-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
-  .project-card .badges { margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
-  .project-card .badges img { height: 22px; }
-  .project-card p { font-size: 14px; color: var(--text2); line-height: 1.7; }
+/* ---- FOOTER ---- */
+footer {
+  padding: 80px 24px 48px; text-align: center;
+  border-top: 1px solid var(--border); transition: border-color var(--transition);
+}
+footer .social { display: flex; justify-content: center; gap: 16px; margin-bottom: 24px; }
+footer .social img { height: 40px; border-radius: 8px; }
+footer .quote { font-size: 14px; color: var(--text-tertiary); font-style: italic; }
 
-  /* ---- FOOTER ---- */
-  footer {
-    text-align: center; padding: 60px 0 40px;
-    border-top: 1px solid rgba(255,255,255,0.04);
-  }
-  footer .social { display: flex; justify-content: center; gap: 16px; margin-bottom: 20px; }
-  footer .social img { height: 40px; border-radius: 8px; transition: transform 0.3s; }
-  footer .social a:hover img { transform: scale(1.08); }
-  footer .quote { font-size: 15px; color: rgba(255,255,255,0.2); font-style: italic; }
+/* ---- REVEAL ---- */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.9s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.9s cubic-bezier(0.25, 0.1, 0.25, 1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
 
-  /* ---- SCROLL REVEAL ---- */
-  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
+/* ---- UNICORN OVERLAY ---- */
+.unicorn-overlay {
+  position: fixed; top: 20px; right: 20px; z-index: 999;
+  font-size: 32px; pointer-events: none;
+  opacity: 0; transition: opacity 0.5s;
+  animation: none;
+}
+[data-theme="unicorn"] .unicorn-overlay {
+  opacity: 1;
+  animation: unicornSpin 1s ease-in-out infinite;
+}
+@keyframes unicornSpin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(15deg) scale(1.3); }
+  100% { transform: rotate(0deg) scale(1); }
+}
 
-  /* ---- RESPONSIVE ---- */
-  @media (max-width: 768px) {
-    .project-grid { grid-template-columns: 1fr; }
-    .tool-grid { grid-template-columns: 1fr 1fr; }
-    nav .links { display: none; }
-  }
-  @media (max-width: 500px) {
-    .tool-grid { grid-template-columns: 1fr; }
-  }
+/* ---- SPARKLE ---- */
+.sparkle {
+  position: fixed; pointer-events: none; z-index: 998;
+  font-size: 20px;
+  animation: sparkleFade 0.8s ease-out forwards;
+}
+@keyframes sparkleFade {
+  0% { opacity: 1; transform: translate(0,0) scale(1); }
+  100% { opacity: 0; transform: translate(var(--sx), var(--sy)) scale(0); }
+}
 
-  /* ---- SHINE / GLIMMER on hero ---- */
-  @keyframes shimmer {
-    0% { background-position: -200% center; }
-    100% { background-position: 200% center; }
-  }
-  .shimmer-text {
-    background: linear-gradient(90deg, var(--indigo), var(--purple), var(--pink), var(--cyan), var(--indigo));
-    background-size: 200% auto;
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: shimmer 4s linear infinite;
-  }
-
-  /* ---- CODE SNIPPET DECORATION ---- */
-  .code-deco {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    color: rgba(255,255,255,0.08);
-    position: absolute;
-    pointer-events: none;
-    user-select: none;
-  }
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  nav .nav-links a:not(.theme-toggle-wrap) { display: none; }
+  nav .inner { padding: 0 20px; }
+  section { padding: 80px 16px; }
+  .project-grid { grid-template-columns: 1fr; }
+  .tool-grid { grid-template-columns: 1fr 1fr; }
+  .card { padding: 24px; }
+}
+@media (max-width: 500px) {
+  .tool-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
 
-<div class="bg-orbs"></div>
-<div class="grid-overlay"></div>
-<div class="extra-orb" style="width:300px;height:300px;background:var(--purple);top:60%;left:70%;animation:floatA 18s ease-in-out infinite;"></div>
+<div class="unicorn-overlay">🦄</div>
 
-<!-- NAV -->
-<nav>
-  <div class="wrapper">
-    <div class="logo">&lt;EG /&gt;</div>
-    <div class="links">
+<canvas id="particles"></canvas>
+
+<nav id="nav">
+  <div class="inner">
+    <span class="logo">&lt;EG /&gt;</span>
+    <div class="nav-links">
       <a href="#about">About</a>
       <a href="#stack">Stack</a>
       <a href="#toolbox">Toolbox</a>
       <a href="#projects">Projects</a>
+      <span class="theme-toggle-wrap">
+        <button class="theme-toggle" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">☀</button>
+      </span>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-orb a"></div>
-  <div class="hero-orb b"></div>
-  <div class="hero-orb c"></div>
-  <div class="wrapper">
-    <p class="subtitle">AI Engineer &amp; Explorer</p>
-    <h1 class="shimmer-text">Emilien Guenichon</h1>
+  <div class="inner">
+    <p class="eyebrow">AI Engineer &amp; Explorer</p>
+    <h1>Emilien Guenichon</h1>
     <p class="tagline">Building the future of AI-native software engineering — one agent, one model, one tool at a time.</p>
-    <div class="hero-badges">
+    <div class="badges">
       <img src="https://komarev.com/ghpvc/?username=guenichone&label=Profile%20views&color=6366f1&style=flat" alt="views">
       <img src="https://img.shields.io/badge/Repos-23-6366f1?style=flat&logo=github" alt="repos">
       <img src="https://img.shields.io/github/followers/guenichone?style=flat&color=6366f1&logo=github" alt="followers">
     </div>
   </div>
+  <p class="scroll-hint">Scroll to explore</p>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="wrapper">
-    <div class="reveal">
-      <span class="section-label">About</span>
+  <div class="section-inner">
+    <div class="reveal card about-text">
+      <p class="section-eyebrow">About</p>
       <h2 class="section-title">Who I am</h2>
-      <div class="glass about-text">
-        Passionate about AI and relentlessly curious about how software gets built. I approach problems with a solution-focused, entrepreneurial mindset — discovering new ideas, sharing what I learn, and improving systems until they're resilient and efficient. My focus: AI evolution in software engineering and large-scale company transformation.
-        <div class="now-bar">
-          <span class="label">NOW</span>
-          <span>Building MCP servers for enterprise workflows · Optimizing Ornith &amp; Qwen inference on Blackwell · Exploring RL for autonomous agents</span>
-        </div>
+      <p>Passionate about AI and relentlessly curious about how software gets built. I approach problems with a <strong>solution-focused, entrepreneurial mindset</strong> — discovering new ideas, sharing what I learn, and improving systems until they're resilient and efficient. My focus: <strong>AI evolution in software engineering</strong> and <strong>large-scale company transformation</strong>.</p>
+      <div class="now-pill">
+        <span class="dot"></span>
+        Building MCP servers · Optimizing Ornith &amp; Qwen on Blackwell · Exploring RL for agents
       </div>
     </div>
   </div>
@@ -355,20 +385,18 @@
 
 <!-- TECH STACK -->
 <section id="stack">
-  <div class="wrapper">
-    <div class="reveal">
-      <span class="section-label">Stack</span>
+  <div class="section-inner">
+    <div class="reveal card">
+      <p class="section-eyebrow">Stack</p>
       <h2 class="section-title">Tech I work with</h2>
-      <div class="glass">
-        <div class="tech-grid">
-          <img src="https://skillicons.dev/icons?i=python,typescript,cpp,rust,java,godot,react,nextjs,tailwind,supabase,docker,linux,bash,git,github,vscode&perline=8" alt="stack" style="height:auto;max-width:100%;">
-        </div>
-        <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:20px;">
-          <img src="https://img.shields.io/badge/Claude_Code-6366f1?style=for-the-badge&logo=claude&logoColor=white" alt="Claude Code" style="height:32px;">
-          <img src="https://img.shields.io/badge/OpenCode-06b6d4?style=for-the-badge&logo=robot&logoColor=white" alt="OpenCode" style="height:32px;">
-          <img src="https://img.shields.io/badge/llama.cpp-FF6B35?style=for-the-badge&logo=llama&logoColor=white" alt="llama.cpp" style="height:32px;">
-          <img src="https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="CUDA" style="height:32px;">
-        </div>
+      <div class="tech-icons">
+        <img src="https://skillicons.dev/icons?i=python,typescript,cpp,rust,java,godot,react,nextjs,tailwind,supabase,docker,linux,bash,git,github,vscode&perline=8" alt="stack" style="height:auto;max-width:100%;">
+      </div>
+      <div class="tools-row">
+        <img src="https://img.shields.io/badge/Claude_Code-6366f1?style=for-the-badge&logo=claude&logoColor=white" alt="Claude Code">
+        <img src="https://img.shields.io/badge/OpenCode-06b6d4?style=for-the-badge&logo=robot&logoColor=white" alt="OpenCode">
+        <img src="https://img.shields.io/badge/llama.cpp-FF6B35?style=for-the-badge&logo=llama&logoColor=white" alt="llama.cpp">
+        <img src="https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="CUDA">
       </div>
     </div>
   </div>
@@ -376,46 +404,52 @@
 
 <!-- TOOLBOX -->
 <section id="toolbox">
-  <div class="wrapper">
+  <div class="section-inner">
     <div class="reveal">
-      <span class="section-label">Toolbox</span>
+      <p class="section-eyebrow">Toolbox</p>
       <h2 class="section-title">Local AI Stack</h2>
       <p class="section-subtitle">The tools I rely on for local-first AI engineering — from context compression to semantic code search.</p>
     </div>
     <div class="tool-grid">
-      <div class="glass tool-card reveal">
-        <a class="badge-link" href="https://github.com/headroomlabs-ai/headroom"><img src="https://img.shields.io/badge/Headroom-6366f1?style=for-the-badge&logo=openai&logoColor=white&labelColor=4f46e5" alt="Headroom"></a>
-        <h3>Context Compression</h3>
+      <div class="card tool-card reveal">
+        <div class="accent" style="background:var(--indigo)"></div>
+        <div class="shield"><img src="https://img.shields.io/badge/Headroom-6366f1?style=for-the-badge&logo=openai&logoColor=white&labelColor=4f46e5" alt="Headroom"></div>
+        <h4>Context Compression</h4>
         <p class="desc">20% fewer tokens for coding agents. 60-95% for JSON. Library, proxy &amp; MCP server.</p>
         <p class="repo"><a href="https://github.com/headroomlabs-ai/headroom">headroomlabs-ai/headroom ↗</a></p>
       </div>
-      <div class="glass tool-card reveal">
-        <a class="badge-link" href="https://github.com/obra/superpowers"><img src="https://img.shields.io/badge/Superpowers-8b5cf6?style=for-the-badge&logo=openai&logoColor=white&labelColor=6d28d9" alt="Superpowers"></a>
-        <h3>Agentic Skills Framework</h3>
+      <div class="card tool-card reveal">
+        <div class="accent" style="background:var(--purple)"></div>
+        <div class="shield"><img src="https://img.shields.io/badge/Superpowers-8b5cf6?style=for-the-badge&logo=openai&logoColor=white&labelColor=6d28d9" alt="Superpowers"></div>
+        <h4>Agentic Skills Framework</h4>
         <p class="desc">Extensible methodology &amp; tooling for building capable AI agents.</p>
         <p class="repo"><a href="https://github.com/obra/superpowers">obra/superpowers ↗</a></p>
       </div>
-      <div class="glass tool-card reveal">
-        <a class="badge-link" href="https://github.com/oraios/serena"><img src="https://img.shields.io/badge/Serena-ec4899?style=for-the-badge&logo=openai&logoColor=white&labelColor=db2777" alt="Serena"></a>
-        <h3>Semantic Code Toolkit</h3>
+      <div class="card tool-card reveal">
+        <div class="accent" style="background:var(--pink)"></div>
+        <div class="shield"><img src="https://img.shields.io/badge/Serena-ec4899?style=for-the-badge&logo=openai&logoColor=white&labelColor=db2777" alt="Serena"></div>
+        <h4>Semantic Code Toolkit</h4>
         <p class="desc">MCP toolkit for semantic retrieval &amp; editing — the IDE for your agent.</p>
         <p class="repo"><a href="https://github.com/oraios/serena">oraios/serena ↗</a></p>
       </div>
-      <div class="glass tool-card reveal">
-        <a class="badge-link" href="https://github.com/Graphify-Labs/graphify"><img src="https://img.shields.io/badge/Graphify-10b981?style=for-the-badge&logo=openai&logoColor=white&labelColor=059669" alt="Graphify"></a>
-        <h3>Knowledge Graph Builder</h3>
+      <div class="card tool-card reveal">
+        <div class="accent" style="background:var(--green)"></div>
+        <div class="shield"><img src="https://img.shields.io/badge/Graphify-10b981?style=for-the-badge&logo=openai&logoColor=white&labelColor=059669" alt="Graphify"></div>
+        <h4>Knowledge Graph Builder</h4>
         <p class="desc">Turn code, schemas, docs &amp; images into queryable knowledge graphs.</p>
         <p class="repo"><a href="https://github.com/Graphify-Labs/graphify">Graphify-Labs/graphify ↗</a></p>
       </div>
-      <div class="glass tool-card reveal">
-        <a class="badge-link" href="https://github.com/standardbeagle/caveman-mcp"><img src="https://img.shields.io/badge/Caveman-f59e0b?style=for-the-badge&logo=openai&logoColor=white&labelColor=d97706" alt="Caveman"></a>
-        <h3>MCP Compression Server</h3>
+      <div class="card tool-card reveal">
+        <div class="accent" style="background:var(--amber)"></div>
+        <div class="shield"><img src="https://img.shields.io/badge/Caveman-f59e0b?style=for-the-badge&logo=openai&logoColor=white&labelColor=d97706" alt="Caveman"></div>
+        <h4>MCP Compression Server</h4>
         <p class="desc">Two-pass Wenyan compression for URLs, files, diffs, logs via MCP.</p>
         <p class="repo"><a href="https://github.com/standardbeagle/caveman-mcp">standardbeagle/caveman-mcp ↗</a></p>
       </div>
-      <div class="glass tool-card reveal">
-        <a class="badge-link" href="https://github.com/DietrichGebert/ponytail"><img src="https://img.shields.io/badge/Ponytail-ef4444?style=for-the-badge&logo=openai&logoColor=white&labelColor=dc2626" alt="Ponytail"></a>
-        <h3>Lazy Senior Dev Mindset</h3>
+      <div class="card tool-card reveal">
+        <div class="accent" style="background:var(--red)"></div>
+        <div class="shield"><img src="https://img.shields.io/badge/Ponytail-ef4444?style=for-the-badge&logo=openai&logoColor=white&labelColor=dc2626" alt="Ponytail"></div>
+        <h4>Lazy Senior Dev Mindset</h4>
         <p class="desc">The best code is the code you never wrote. Minimalist AI prompting.</p>
         <p class="repo"><a href="https://github.com/DietrichGebert/ponytail">DietrichGebert/ponytail ↗</a></p>
       </div>
@@ -425,102 +459,214 @@
 
 <!-- PROJECTS -->
 <section id="projects">
-  <div class="wrapper">
+  <div class="section-inner">
     <div class="reveal">
-      <span class="section-label">Projects</span>
+      <p class="section-eyebrow">Projects</p>
       <h2 class="section-title">What I build</h2>
     </div>
     <div class="project-grid">
-      <div class="glass project-card reveal">
-        <h3>🤖 Claude Config Benchmark</h3>
+      <div class="card project-card reveal">
+        <h4>🤖 Claude Config Benchmark</h4>
         <div class="badges">
           <img src="https://img.shields.io/badge/Shell-4EAA25?style=flat&logo=gnubash&logoColor=white" alt="Shell">
           <img src="https://img.shields.io/github/license/guenichone/claude-config-benchmark?color=blue" alt="License">
         </div>
-        <p>Isolated worktrees, token cost tracking, build/test pass-rates, LLM-judged quality — all automated. Find the config that actually ships.</p>
+        <p class="desc">Isolated worktrees, token cost tracking, build/test pass-rates, LLM-judged quality — all automated. Find the config that actually ships.</p>
       </div>
-      <div class="glass project-card reveal">
-        <h3>🦙 Local LLMs</h3>
+      <div class="card project-card reveal">
+        <h4>🦙 Local LLMs</h4>
         <div class="badges">
           <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python">
           <img src="https://img.shields.io/badge/CUDA-12.8-76B900?style=flat&logo=nvidia&logoColor=white" alt="CUDA">
         </div>
-        <p>Battle-tested llama.cpp configs for RTX 5080. CUDA 12.8 workarounds, server flags, model quant comparisons.</p>
+        <p class="desc">Battle-tested llama.cpp configs for RTX 5080. CUDA 12.8 workarounds, server flags, model quant comparisons.</p>
       </div>
-      <div class="glass project-card reveal">
-        <h3>🔌 Atlassian Bitbucket MCP</h3>
+      <div class="card project-card reveal">
+        <h4>🔌 Atlassian Bitbucket MCP</h4>
         <div class="badges">
           <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" alt="TS">
           <img src="https://img.shields.io/badge/MCP-Server-6366f1?style=flat" alt="MCP">
           <img src="https://img.shields.io/github/stars/guenichone/atlassian-bitbucket-server-mcp?color=yellow" alt="Stars">
         </div>
-        <p>Give AI agents access to self-hosted Bitbucket. PR reviews, repo browsing, code reviews — all through MCP.</p>
+        <p class="desc">Give AI agents access to self-hosted Bitbucket. PR reviews, repo browsing, code reviews — all through MCP.</p>
       </div>
-      <div class="glass project-card reveal">
-        <h3>🎮 Brotato AI</h3>
+      <div class="card project-card reveal">
+        <h4>🎮 Brotato AI</h4>
         <div class="badges">
           <img src="https://img.shields.io/badge/GDScript-478CBF?style=flat&logo=godotengine&logoColor=white" alt="GDScript">
           <img src="https://img.shields.io/badge/RL-SB3-red?style=flat" alt="RL">
           <img src="https://img.shields.io/github/stars/guenichone/brotatoai?color=yellow" alt="Stars">
         </div>
-        <p>An RL agent that plays Brotato by itself. Stable-Baselines3 + Gymnasium. Because games are the best testbed for AI.</p>
+        <p class="desc">An RL agent that plays Brotato by itself. Stable-Baselines3 + Gymnasium. Games are the best testbed for AI.</p>
       </div>
-      <div class="glass project-card reveal">
-        <h3>📦 Barrak Skill Marketplace</h3>
+      <div class="card project-card reveal">
+        <h4>📦 Barrak Skill Marketplace</h4>
         <div class="badges">
           <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python">
           <img src="https://img.shields.io/badge/Claude_Code-Plugin-6366f1?style=flat" alt="Plugin">
         </div>
-        <p>Plugin marketplace for Claude Code. Distributes yt-video-data skill — YouTube transcripts &amp; metadata, no API keys needed.</p>
+        <p class="desc">Plugin marketplace for Claude Code. Distributes yt-video-data skill — YouTube transcripts &amp; metadata, no API keys needed.</p>
       </div>
-      <div class="glass project-card reveal">
-        <h3>💸 Fund Builder Suite</h3>
+      <div class="card project-card reveal">
+        <h4>💸 Fund Builder Suite</h4>
         <div class="badges">
           <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" alt="TS">
           <img src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat&logo=supabase&logoColor=white" alt="Supabase">
           <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black" alt="React">
         </div>
-        <p>Full-stack app. React, Tailwind, shadcn/ui, Supabase. Modern components with database-backed operations.</p>
+        <p class="desc">Full-stack app. React, Tailwind, shadcn/ui, Supabase. Modern components with database-backed operations.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="wrapper">
-    <div class="reveal">
-      <div class="social">
-        <a href="https://github.com/guenichone"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
-        <a href="https://www.linkedin.com/in/emilien-guenichon-9b127629/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-      </div>
-      <p class="quote">"The best way to predict the future is to build it."</p>
+  <div class="reveal">
+    <div class="social">
+      <a href="https://github.com/guenichone"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/emilien-guenichon-9b127629/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
     </div>
+    <p class="quote">“The best way to predict the future is to build it.”</p>
   </div>
 </footer>
 
 <script>
-  // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+// ---- PARTICLES ----
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+let particles = [];
+let mouse = { x: -1000, y: -1000 };
+let isUnicorn = false;
 
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resize);
+resize();
 
-  // Nav scroll effect
-  window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 50) {
-      nav.style.background = 'rgba(8,8,12,0.9)';
-    } else {
-      nav.style.background = 'rgba(8,8,12,0.7)';
-    }
+class Particle {
+  constructor() {
+    this.reset();
+    this.y = Math.random() * canvas.height;
+  }
+  reset() {
+    this.x = Math.random() * canvas.width;
+    this.y = -10;
+    this.size = Math.random() * 1.8 + 0.4;
+    this.speed = Math.random() * 0.3 + 0.1;
+    this.opacity = Math.random() * 0.4 + 0.1;
+    this.drift = (Math.random() - 0.5) * 0.2;
+    this.hue = isUnicorn ? Math.random() * 360 : 240 + Math.random() * 30;
+  }
+  update() {
+    this.y += this.speed;
+    this.x += this.drift + (mouse.x - canvas.width/2) * 0.0001 * this.speed;
+    if (this.y > canvas.height + 10) this.reset();
+    if (this.x < -10) this.x = canvas.width + 10;
+    if (this.x > canvas.width + 10) this.x = -10;
+  }
+  draw() {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    const baseAlpha = isLight ? 0.15 : 0.3;
+    const alpha = this.opacity * baseAlpha;
+    const hue = isUnicorn ? this.hue : 240;
+    const sat = isUnicorn ? '80%' : '30%';
+    const light = isUnicorn ? '60%' : (isLight ? '40%' : '70%');
+    ctx.fillStyle = `hsla(${hue}, ${sat}, ${light}, ${alpha})`;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+  }
+}
+
+for (let i = 0; i < 80; i++) particles.push(new Particle());
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particles.forEach(p => { p.update(); p.draw(); });
+  requestAnimationFrame(animate);
+}
+animate();
+
+document.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+
+// ---- SCROLL REVEAL ----
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ---- NAV SCROLL ----
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// ---- CARD MOUSE GLOW ----
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    card.style.setProperty('--mx', x + '%');
+    card.style.setProperty('--my', y + '%');
   });
-</script>
+  card.addEventListener('mouseleave', () => {
+    card.style.setProperty('--mx', '50%');
+    card.style.setProperty('--my', '50%');
+  });
+});
 
+// ---- THEME TOGGLE ----
+const html = document.documentElement;
+const themeBtn = document.getElementById('themeBtn');
+function setTheme(theme) {
+  html.setAttribute('data-theme', theme);
+  isUnicorn = theme === 'unicorn';
+  particles.forEach(p => { p.hue = isUnicorn ? Math.random() * 360 : 240 + Math.random() * 30; });
+  themeBtn.textContent = theme === 'light' ? '☽' : theme === 'unicorn' ? '🦄' : '☀';
+  if (theme === 'unicorn') {
+    sparkleBurst();
+  }
+}
+themeBtn.addEventListener('click', () => {
+  const current = html.getAttribute('data-theme');
+  setTheme(current === 'dark' ? 'light' : current === 'light' ? 'dark' : 'dark');
+});
+
+// ---- KONAMI CODE ----
+const konami = [38,38,40,40,37,39,37,39,66,65];
+let konamiIdx = 0;
+document.addEventListener('keydown', e => {
+  if (e.keyCode === konami[konamiIdx]) {
+    konamiIdx++;
+    if (konamiIdx === konami.length) {
+      konamiIdx = 0;
+      setTheme('unicorn');
+    }
+  } else {
+    konamiIdx = 0;
+  }
+});
+
+// ---- SPARKLE BURST ----
+const emojis = ['✨','🌟','💫','⭐','🌈','💖','🦄','🎀','💎','🔮'];
+function sparkleBurst() {
+  for (let i = 0; i < 25; i++) {
+    setTimeout(() => {
+      const el = document.createElement('span');
+      el.className = 'sparkle';
+      el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      el.style.left = (20 + Math.random() * 60) + '%';
+      el.style.top = (20 + Math.random() * 60) + '%';
+      el.style.setProperty('--sx', (Math.random() - 0.5) * 200 + 'px');
+      el.style.setProperty('--sy', (Math.random() - 0.5) * 200 + 'px');
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 800);
+    }, i * 30);
+  }
+}
+</script>
 </body>
 </html>
