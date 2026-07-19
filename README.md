@@ -44,23 +44,6 @@ Passionate and curious builder driven by **AI evolution in software engineering*
 
 ---
 
-### 🤖 AI & Agent Stack
-
-<div align="center">
-
-| Category | Tools & Models |
-|:---|:---|
-| **Frameworks** | Claude Code · OpenCode · Hermes Agent |
-| **Local Models** | Ornith 1.0 9B Q5_K_M · Qwen 3.6 27B MTP · Gemma 4 |
-| **Inference** | llama.cpp + custom CUDA 12.8 build · Flash Attention · MTP speculative decoding |
-| **Proxies** | free-claude-code · OpenRouter proxy · OpenAI-compatible bridge |
-| **MCP Servers** | Bitbucket MCP · yt-video-data · custom tool servers |
-| **GPU** | NVIDIA RTX 5080 · Blackwell sm_120 · CUDA 12.8 + 13.3 driver |
-
-</div>
-
----
-
 ### 🏠 Local AI Stack
 
 <div align="center">
