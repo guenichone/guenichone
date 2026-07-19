@@ -178,7 +178,7 @@ nav .nav-links a:hover { color: var(--text); }
 }
 
 /* ---- SECTIONS ---- */
-section { padding: 120px 24px; position: relative; z-index: 1; }
+section { padding: 72px 24px; position: relative; z-index: 1; }
 .section-inner { max-width: 1000px; margin: 0 auto; }
 .section-eyebrow {
   font-family: var(--mono); font-size: 12px; font-weight: 600;
@@ -287,8 +287,24 @@ footer .social img { height: 40px; border-radius: 8px; }
 footer .quote { font-size: 14px; color: var(--text-tertiary); font-style: italic; }
 
 /* ---- REVEAL ---- */
-.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.9s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.9s cubic-bezier(0.25, 0.1, 0.25, 1); }
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
+
+.reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.7s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1); }
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+
+.reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.7s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1); }
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+.reveal-scale { opacity: 0; transform: scale(0.92); transition: opacity 0.7s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1); }
+.reveal-scale.visible { opacity: 1; transform: scale(1); }
+
+.stagger-1 { transition-delay: 0s; }
+.stagger-2 { transition-delay: 0.08s; }
+.stagger-3 { transition-delay: 0.16s; }
+.stagger-4 { transition-delay: 0.24s; }
+.stagger-5 { transition-delay: 0.32s; }
+.stagger-6 { transition-delay: 0.4s; }
 
 /* ---- UNICORN OVERLAY ---- */
 .unicorn-overlay {
@@ -322,7 +338,7 @@ footer .quote { font-size: 14px; color: var(--text-tertiary); font-style: italic
 @media (max-width: 768px) {
   nav .nav-links a:not(.theme-toggle-wrap) { display: none; }
   nav .inner { padding: 0 20px; }
-  section { padding: 80px 16px; }
+  section { padding: 60px 16px; }
   .project-grid { grid-template-columns: 1fr; }
   .tool-grid { grid-template-columns: 1fr 1fr; }
   .card { padding: 24px; }
@@ -411,42 +427,42 @@ footer .quote { font-size: 14px; color: var(--text-tertiary); font-style: italic
       <p class="section-subtitle">The tools I rely on for local-first AI engineering — from context compression to semantic code search.</p>
     </div>
     <div class="tool-grid">
-      <div class="card tool-card reveal">
+      <div class="card tool-card reveal-left stagger-1">
         <div class="accent" style="background:var(--indigo)"></div>
         <div class="shield"><img src="https://img.shields.io/badge/Headroom-6366f1?style=for-the-badge&logo=openai&logoColor=white&labelColor=4f46e5" alt="Headroom"></div>
         <h4>Context Compression</h4>
         <p class="desc">20% fewer tokens for coding agents. 60-95% for JSON. Library, proxy &amp; MCP server.</p>
         <p class="repo"><a href="https://github.com/headroomlabs-ai/headroom">headroomlabs-ai/headroom ↗</a></p>
       </div>
-      <div class="card tool-card reveal">
+      <div class="card tool-card reveal-right stagger-2">
         <div class="accent" style="background:var(--purple)"></div>
         <div class="shield"><img src="https://img.shields.io/badge/Superpowers-8b5cf6?style=for-the-badge&logo=openai&logoColor=white&labelColor=6d28d9" alt="Superpowers"></div>
         <h4>Agentic Skills Framework</h4>
         <p class="desc">Extensible methodology &amp; tooling for building capable AI agents.</p>
         <p class="repo"><a href="https://github.com/obra/superpowers">obra/superpowers ↗</a></p>
       </div>
-      <div class="card tool-card reveal">
+      <div class="card tool-card reveal-left stagger-3">
         <div class="accent" style="background:var(--pink)"></div>
         <div class="shield"><img src="https://img.shields.io/badge/Serena-ec4899?style=for-the-badge&logo=openai&logoColor=white&labelColor=db2777" alt="Serena"></div>
         <h4>Semantic Code Toolkit</h4>
         <p class="desc">MCP toolkit for semantic retrieval &amp; editing — the IDE for your agent.</p>
         <p class="repo"><a href="https://github.com/oraios/serena">oraios/serena ↗</a></p>
       </div>
-      <div class="card tool-card reveal">
+      <div class="card tool-card reveal-right stagger-4">
         <div class="accent" style="background:var(--green)"></div>
         <div class="shield"><img src="https://img.shields.io/badge/Graphify-10b981?style=for-the-badge&logo=openai&logoColor=white&labelColor=059669" alt="Graphify"></div>
         <h4>Knowledge Graph Builder</h4>
         <p class="desc">Turn code, schemas, docs &amp; images into queryable knowledge graphs.</p>
         <p class="repo"><a href="https://github.com/Graphify-Labs/graphify">Graphify-Labs/graphify ↗</a></p>
       </div>
-      <div class="card tool-card reveal">
+      <div class="card tool-card reveal-scale stagger-5">
         <div class="accent" style="background:var(--amber)"></div>
         <div class="shield"><img src="https://img.shields.io/badge/Caveman-f59e0b?style=for-the-badge&logo=openai&logoColor=white&labelColor=d97706" alt="Caveman"></div>
         <h4>MCP Compression Server</h4>
         <p class="desc">Two-pass Wenyan compression for URLs, files, diffs, logs via MCP.</p>
         <p class="repo"><a href="https://github.com/standardbeagle/caveman-mcp">standardbeagle/caveman-mcp ↗</a></p>
       </div>
-      <div class="card tool-card reveal">
+      <div class="card tool-card reveal-scale stagger-6">
         <div class="accent" style="background:var(--red)"></div>
         <div class="shield"><img src="https://img.shields.io/badge/Ponytail-ef4444?style=for-the-badge&logo=openai&logoColor=white&labelColor=dc2626" alt="Ponytail"></div>
         <h4>Lazy Senior Dev Mindset</h4>
@@ -465,7 +481,7 @@ footer .quote { font-size: 14px; color: var(--text-tertiary); font-style: italic
       <h2 class="section-title">What I build</h2>
     </div>
     <div class="project-grid">
-      <div class="card project-card reveal">
+      <div class="card project-card reveal-left stagger-1">
         <h4>🤖 Claude Config Benchmark</h4>
         <div class="badges">
           <img src="https://img.shields.io/badge/Shell-4EAA25?style=flat&logo=gnubash&logoColor=white" alt="Shell">
@@ -473,7 +489,7 @@ footer .quote { font-size: 14px; color: var(--text-tertiary); font-style: italic
         </div>
         <p class="desc">Isolated worktrees, token cost tracking, build/test pass-rates, LLM-judged quality — all automated. Find the config that actually ships.</p>
       </div>
-      <div class="card project-card reveal">
+      <div class="card project-card reveal-right stagger-2">
         <h4>🦙 Local LLMs</h4>
         <div class="badges">
           <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python">
@@ -481,7 +497,7 @@ footer .quote { font-size: 14px; color: var(--text-tertiary); font-style: italic
         </div>
         <p class="desc">Battle-tested llama.cpp configs for RTX 5080. CUDA 12.8 workarounds, server flags, model quant comparisons.</p>
       </div>
-      <div class="card project-card reveal">
+      <div class="card project-card reveal-left stagger-3">
         <h4>🔌 Atlassian Bitbucket MCP</h4>
         <div class="badges">
           <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" alt="TS">
@@ -490,7 +506,7 @@ footer .quote { font-size: 14px; color: var(--text-tertiary); font-style: italic
         </div>
         <p class="desc">Give AI agents access to self-hosted Bitbucket. PR reviews, repo browsing, code reviews — all through MCP.</p>
       </div>
-      <div class="card project-card reveal">
+      <div class="card project-card reveal-right stagger-4">
         <h4>🎮 Brotato AI</h4>
         <div class="badges">
           <img src="https://img.shields.io/badge/GDScript-478CBF?style=flat&logo=godotengine&logoColor=white" alt="GDScript">
@@ -499,7 +515,7 @@ footer .quote { font-size: 14px; color: var(--text-tertiary); font-style: italic
         </div>
         <p class="desc">An RL agent that plays Brotato by itself. Stable-Baselines3 + Gymnasium. Games are the best testbed for AI.</p>
       </div>
-      <div class="card project-card reveal">
+      <div class="card project-card reveal-scale stagger-5">
         <h4>📦 Barrak Skill Marketplace</h4>
         <div class="badges">
           <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python">
@@ -507,7 +523,7 @@ footer .quote { font-size: 14px; color: var(--text-tertiary); font-style: italic
         </div>
         <p class="desc">Plugin marketplace for Claude Code. Distributes yt-video-data skill — YouTube transcripts &amp; metadata, no API keys needed.</p>
       </div>
-      <div class="card project-card reveal">
+      <div class="card project-card reveal-scale stagger-6">
         <h4>💸 Fund Builder Suite</h4>
         <div class="badges">
           <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" alt="TS">
@@ -612,7 +628,7 @@ document.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.c
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
 
 // ---- NAV SCROLL ----
 const nav = document.getElementById('nav');
