@@ -83,7 +83,7 @@
 
 </div>
 
-I'm a passionate and curious person, solution-focused and entrepreneurial. I love discovering new ideas, sharing findings, and improving systems to be resilient and efficient. Deeply focused on AI evolution in software engineering and large-scale company transformation.
+Passionate about AI and relentlessly curious about how software gets built. I approach problems with a solution-focused, entrepreneurial mindset — discovering new ideas, sharing what I learn, and improving systems until they're resilient and efficient. My focus: AI evolution in software engineering and large-scale company transformation.
 
 > **Now** — Building MCP servers for enterprise workflows · Optimizing Ornith & Qwen inference on Blackwell · Exploring RL for autonomous agents
 
