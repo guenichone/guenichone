@@ -1,12 +1,76 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=Emilien+Guenichon;AI+Engineer+%26+Explorer;Problem+Solver;Open+Source+Builder" alt="Typing SVG" />
+<svg width="800" height="220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <animate attributeName="x1" values="0%;100%;0%" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="100%;0%;100%" dur="10s" repeatCount="indefinite" />
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="g2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <animate attributeName="x1" values="100%;0%;100%" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="0%;100%;0%" dur="8s" repeatCount="indefinite" />
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="30" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="220" rx="20" fill="#0d1117" stroke="url(#g1)" stroke-width="1" opacity="0.9" />
+
+  <!-- animated bg circles -->
+  <circle cx="150" cy="110" r="60" fill="url(#g1)" opacity="0.08">
+    <animate attributeName="r" values="50;70;50" dur="6s" repeatCount="indefinite" />
+    <animate attributeName="cx" values="150;170;150" dur="8s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="650" cy="80" r="45" fill="url(#g2)" opacity="0.08">
+    <animate attributeName="r" values="40;55;40" dur="5s" repeatCount="indefinite" />
+    <animate attributeName="cx" values="650;630;650" dur="7s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="400" cy="160" r="35" fill="url(#g1)" opacity="0.06">
+    <animate attributeName="r" values="30;45;30" dur="7s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- floating dots -->
+  <circle cx="100" cy="40" r="2" fill="#6366f1">
+    <animate attributeName="cy" values="40;30;40" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="300" cy="30" r="1.5" fill="#a855f7">
+    <animate attributeName="cy" values="30;20;30" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="1;0.2;1" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="550" cy="35" r="2" fill="#ec4899">
+    <animate attributeName="cy" values="35;25;35" dur="3.5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="720" cy="50" r="1.5" fill="#06b6d4">
+    <animate attributeName="cy" values="50;38;50" dur="4.5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="1;0.3;1" dur="4.5s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- name -->
+  <text x="400" y="85" text-anchor="middle" fill="white" font-family="Segoe UI, sans-serif" font-size="38" font-weight="700" letter-spacing="2" filter="url(#glow)">
+    Emilien Guenichon
+  </text>
+
+  <!-- subtitle background highlight -->
+  <rect x="170" y="115" width="460" height="28" rx="14" fill="url(#g1)" opacity="0.15" />
+  <text x="400" y="135" text-anchor="middle" fill="#c4b5fd" font-family="monospace" font-size="14" font-weight="500">
+    AI Engineer &amp; Explorer  •  Open Source Builder
+  </text>
+</svg>
 
 <br />
-
-<p>
-  <i>Building the future of AI-native software engineering — one agent, one model, one tool at a time.</i>
-</p>
 
 <a href="https://github.com/guenichone"><img src="https://komarev.com/ghpvc/?username=guenichone&label=Profile%20views&color=6366f1&style=flat" alt="Profile views" /></a>
 <a href="https://github.com/guenichone?tab=repositories"><img src="https://img.shields.io/badge/Repos-23-6366f1?style=flat&logo=github" alt="Repos" /></a>
@@ -14,20 +78,38 @@
 
 </div>
 
+<br />
+
 ---
 
-### 👋 About Me
+<div align="center">
+  <svg width="600" height="4" xmlns="http://www.w3.org/2000/svg">
+    <rect width="600" height="4" rx="2" fill="url(#g1)">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite" />
+    </rect>
+  </svg>
+</div>
+
+<div align="center">
+
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Astronaut.png" width="28" /> About Me
+
+</div>
 
 Passionate and curious builder driven by **AI evolution in software engineering** and **large-scale company transformation**. I love discovering new ideas, sharing findings, and improving systems to be resilient and efficient — always with a solution-focused, entrepreneurial mindset.
 
-- 🔭 **Currently:** Running local LLMs (Ornith, Qwen) on RTX 5080 via custom llama.cpp builds
-- 🧠 **Specializing in:** Agentic systems, MCP tool servers, local inference pipelines
-- 🌱 **Exploring:** AI-native developer tooling, enterprise AI adoption patterns
-- ⚡ **Philosophy:** Ship fast, benchmark everything, iterate — and share what you learn
+- 🔭 **Currently** — Running local LLMs (Ornith, Qwen) on RTX 5080 via custom llama.cpp builds
+- 🧠 **Specializing in** — Agentic systems, MCP tool servers, local inference pipelines
+- 🌱 **Exploring** — AI-native developer tooling, enterprise AI adoption patterns
+- ⚡ **Philosophy** — Ship fast, benchmark everything, iterate — and share what you learn
 
 ---
 
-### 🛠️ Tech Stack
+<div align="center">
+
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" width="28" /> Tech Stack
+
+</div>
 
 <div align="center">
 
@@ -35,64 +117,95 @@ Passionate and curious builder driven by **AI evolution in software engineering*
 
 <br />
 
-<a href="https://claude.ai"><img src="https://img.shields.io/badge/Claude_Code-6366f1?style=flat&logo=claude&logoColor=white" alt="Claude Code" /></a>
-<a href="https://opencode.ai"><img src="https://img.shields.io/badge/OpenCode-6366f1?style=flat&logo=robot&logoColor=white" alt="OpenCode" /></a>
-<a href="https://github.com/ggml-org/llama.cpp"><img src="https://img.shields.io/badge/llama.cpp-FF6B35?style=flat&logo=llama&logoColor=white" alt="llama.cpp" /></a>
-<a href="https://developer.nvidia.com/cuda-toolkit"><img src="https://img.shields.io/badge/CUDA-76B900?style=flat&logo=nvidia&logoColor=white" alt="CUDA" /></a>
+<nobr>
+  <a href="https://claude.ai"><img src="https://img.shields.io/badge/Claude_Code-6366f1?style=for-the-badge&logo=claude&logoColor=white" alt="Claude Code" /></a>
+  <a href="https://opencode.ai"><img src="https://img.shields.io/badge/OpenCode-06b6d4?style=for-the-badge&logo=robot&logoColor=white" alt="OpenCode" /></a>
+  <a href="https://github.com/ggml-org/llama.cpp"><img src="https://img.shields.io/badge/llama.cpp-FF6B35?style=for-the-badge&logo=llama&logoColor=white" alt="llama.cpp" /></a>
+  <a href="https://developer.nvidia.com/cuda-toolkit"><img src="https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="CUDA" /></a>
+</nobr>
 
 </div>
 
 ---
 
-### 🏠 Local AI Stack
+<div align="center">
+
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="28" /> Local AI Stack
+
+</div>
 
 <div align="center">
 
 <table>
 <tr>
-<td align="center" width="33%">
+<td width="33%" align="center">
   <a href="https://github.com/headroomlabs-ai/headroom">
-    <img src="https://img.shields.io/badge/Headroom-6366f1?style=for-the-badge&logo=robot&logoColor=white" alt="Headroom" />
+    <img src="https://img.shields.io/badge/Headroom-6366f1?style=for-the-badge&logo=openai&logoColor=white&labelColor=4f46e5" alt="Headroom" />
   </a>
+  <br /><br />
+  <sub><b>Context Compression</b></sub>
   <br />
-  <sub>Context compression for AI agents. 20% fewer tokens for coding, 60-95% for JSON — same answers. Library, proxy & MCP server.</sub>
+  <sub>20% fewer tokens for coding agents. 60-95% for JSON. Library, proxy & MCP server.</sub>
+  <br />
+  <sub><code>↗ headroomlabs-ai/headroom</code></sub>
 </td>
-<td align="center" width="33%">
+<td width="33%" align="center">
   <a href="https://github.com/obra/superpowers">
-    <img src="https://img.shields.io/badge/Superpowers-8B5CF6?style=for-the-badge&logo=robot&logoColor=white" alt="Superpowers" />
+    <img src="https://img.shields.io/badge/Superpowers-8b5cf6?style=for-the-badge&logo=openai&logoColor=white&labelColor=6d28d9" alt="Superpowers" />
   </a>
+  <br /><br />
+  <sub><b>Agentic Skills Framework</b></sub>
   <br />
-  <sub>Agentic skills framework & software development methodology that works.</sub>
+  <sub>Extensible methodology & tooling for building capable AI agents.</sub>
+  <br />
+  <sub><code>↗ obra/superpowers</code></sub>
 </td>
-<td align="center" width="33%">
+<td width="33%" align="center">
   <a href="https://github.com/oraios/serena">
-    <img src="https://img.shields.io/badge/Serena-EC4899?style=for-the-badge&logo=robot&logoColor=white" alt="Serena" />
+    <img src="https://img.shields.io/badge/Serena-ec4899?style=for-the-badge&logo=openai&logoColor=white&labelColor=db2777" alt="Serena" />
   </a>
+  <br /><br />
+  <sub><b>Semantic Code Toolkit</b></sub>
   <br />
-  <sub>MCP toolkit for semantic code retrieval & editing — the IDE for your agent.</sub>
+  <sub>MCP toolkit for semantic retrieval & editing — the IDE for your agent.</sub>
+  <br />
+  <sub><code>↗ oraios/serena</code></sub>
 </td>
 </tr>
+<tr><td colspan="3"><br /></td></tr>
 <tr>
-<td align="center" width="33%">
+<td width="33%" align="center">
   <a href="https://github.com/Graphify-Labs/graphify">
-    <img src="https://img.shields.io/badge/Graphify-10B981?style=for-the-badge&logo=robot&logoColor=white" alt="Graphify" />
+    <img src="https://img.shields.io/badge/Graphify-10b981?style=for-the-badge&logo=openai&logoColor=white&labelColor=059669" alt="Graphify" />
   </a>
+  <br /><br />
+  <sub><b>Knowledge Graph Builder</b></sub>
   <br />
-  <sub>Turn any folder of code, schemas, docs, or images into a queryable knowledge graph.</sub>
+  <sub>Turn code, schemas, docs & images into queryable knowledge graphs.</sub>
+  <br />
+  <sub><code>↗ Graphify-Labs/graphify</code></sub>
 </td>
-<td align="center" width="33%">
+<td width="33%" align="center">
   <a href="https://github.com/standardbeagle/caveman-mcp">
-    <img src="https://img.shields.io/badge/Caveman-F59E0B?style=for-the-badge&logo=robot&logoColor=white" alt="Caveman" />
+    <img src="https://img.shields.io/badge/Caveman-f59e0b?style=for-the-badge&logo=openai&logoColor=white&labelColor=d97706" alt="Caveman" />
   </a>
+  <br /><br />
+  <sub><b>MCP Compression Server</b></sub>
   <br />
-  <sub>MCP server: two-pass Wenyan compression for URLs, files, diffs, and logs.</sub>
+  <sub>Two-pass Wenyan compression for URLs, files, diffs, logs via MCP.</sub>
+  <br />
+  <sub><code>↗ standardbeagle/caveman-mcp</code></sub>
 </td>
-<td align="center" width="33%">
+<td width="33%" align="center">
   <a href="https://github.com/DietrichGebert/ponytail">
-    <img src="https://img.shields.io/badge/Ponytail-EF4444?style=for-the-badge&logo=robot&logoColor=white" alt="Ponytail" />
+    <img src="https://img.shields.io/badge/Ponytail-ef4444?style=for-the-badge&logo=openai&logoColor=white&labelColor=dc2626" alt="Ponytail" />
   </a>
+  <br /><br />
+  <sub><b>Lazy Senior Dev Mindset</b></sub>
   <br />
-  <sub>Makes your AI agent think like the laziest senior dev — the best code is the code you never wrote.</sub>
+  <sub>The best code is the code you never wrote. Minimalist AI prompting.</sub>
+  <br />
+  <sub><code>↗ DietrichGebert/ponytail</code></sub>
 </td>
 </tr>
 </table>
@@ -101,86 +214,108 @@ Passionate and curious builder driven by **AI evolution in software engineering*
 
 ---
 
-### 📌 Featured Projects
-
 <div align="center">
+
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Books.png" width="28" /> Featured Projects
+
+</div>
 
 <table>
 <tr>
-<td width="50%">
-<h3 align="center">🤖 Claude Config Benchmark</h3>
-<p align="center">
-<a href="https://github.com/guenichone/claude-config-benchmark"><img src="https://img.shields.io/badge/Shell-4EAA25?style=flat&logo=gnubash&logoColor=white" /></a>
-<a href="https://github.com/guenichone/claude-config-benchmark"><img src="https://img.shields.io/github/license/guenichone/claude-config-benchmark?color=blue" /></a>
-</p>
-<p align="center">Framework for empirically benchmarking Claude Code tool/MCP configurations on real engineering tasks. Spawns isolated git worktrees, measures token cost, build/test pass-rate, and LLM-judged code quality.</p>
+<td width="50%" valign="top">
+
+#### 🤖 Claude Config Benchmark
+<a href="https://github.com/guenichone/claude-config-benchmark">
+  <img src="https://img.shields.io/badge/Shell-4EAA25?style=flat&logo=gnubash&logoColor=white" />
+  <img src="https://img.shields.io/github/license/guenichone/claude-config-benchmark?color=blue" />
+</a>
+
+Empirical benchmarking of Claude Code MCP configurations on real tasks. Isolated git worktrees, token cost, build/test pass-rate, LLM-judged quality.
+
 </td>
-<td width="50%">
-<h3 align="center">🦙 Local LLMs</h3>
-<p align="center">
-<a href="https://github.com/guenichone/local-llms"><img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" /></a>
-<a href="https://github.com/guenichone/local-llms"><img src="https://img.shields.io/badge/CUDA-12.8-76B900?style=flat&logo=nvidia&logoColor=white" /></a>
-</p>
-<p align="center">Curated configuration & benchmarks for local LLMs on RTX 5080 (16GB). CUDA 12.8 Blackwell workarounds, llama.cpp server flags, agent wiring, model quant comparison.</p>
-</td>
-</tr>
-<tr>
-<td width="50%">
-<h3 align="center">🔌 Atlassian Bitbucket MCP</h3>
-<p align="center">
-<a href="https://github.com/guenichone/atlassian-bitbucket-server-mcp"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" /></a>
-<a href="https://github.com/guenichone/atlassian-bitbucket-server-mcp"><img src="https://img.shields.io/badge/MCP-Server-6366f1?style=flat" /></a>
-<a href="https://github.com/guenichone/atlassian-bitbucket-server-mcp"><img src="https://img.shields.io/github/stars/guenichone/atlassian-bitbucket-server-mcp?color=yellow" /></a>
-</p>
-<p align="center">MCP server for self-hosted Bitbucket Server. Enables AI agents to interact with PRs, repos, and code reviews through the Model Context Protocol.</p>
-</td>
-<td width="50%">
-<h3 align="center">🎮 Brotato AI</h3>
-<p align="center">
-<a href="https://github.com/guenichone/brotatoai"><img src="https://img.shields.io/badge/GDScript-478CBF?style=flat&logo=godotengine&logoColor=white" /></a>
-<a href="https://github.com/guenichone/brotatoai"><img src="https://img.shields.io/badge/RL-SB3-red?style=flat" /></a>
-<a href="https://github.com/guenichone/brotatoai"><img src="https://img.shields.io/github/stars/guenichone/brotatoai?color=yellow" /></a>
-</p>
-<p align="center">AI mod for Brotato using Stable-Baselines3 reinforcement learning. Trains agents to play the game autonomously via Gymnasium environments.</p>
+<td width="50%" valign="top">
+
+#### 🦙 Local LLMs
+<a href="https://github.com/guenichone/local-llms">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/CUDA-12.8-76B900?style=flat&logo=nvidia&logoColor=white" />
+</a>
+
+Curated configs & benchmarks for local LLMs on RTX 5080 (16GB). Blackwell CUDA workarounds, llama.cpp flags, quant comparison.
+
 </td>
 </tr>
 <tr>
-<td width="50%">
-<h3 align="center">📦 Barrak Skill Marketplace</h3>
-<p align="center">
-<a href="https://github.com/guenichone/barrak-skill-marketplace"><img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" /></a>
-<a href="https://github.com/guenichone/barrak-skill-marketplace"><img src="https://img.shields.io/badge/Claude_Code-Plugin-6366f1?style=flat" /></a>
-</p>
-<p align="center">Claude Code plugin marketplace. Ships yt-video-data skill for YouTube transcripts & metadata using yt-dlp + youtube-transcript-api.</p>
+<td width="50%" valign="top">
+
+#### 🔌 Atlassian Bitbucket MCP
+<a href="https://github.com/guenichone/atlassian-bitbucket-server-mcp">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/MCP-Server-6366f1?style=flat" />
+  <img src="https://img.shields.io/github/stars/guenichone/atlassian-bitbucket-server-mcp?color=yellow" />
+</a>
+
+MCP server for self-hosted Bitbucket. AI agents interact with PRs, repos, and code reviews through Model Context Protocol.
+
 </td>
-<td width="50%">
-<h3 align="center">💸 Fund Builder Suite</h3>
-<p align="center">
-<a href="https://github.com/guenichone/fund-builder-suite"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" /></a>
-<a href="https://github.com/guenichone/fund-builder-suite"><img src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat&logo=supabase&logoColor=white" /></a>
-<a href="https://github.com/guenichone/fund-builder-suite"><img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black" /></a>
-</p>
-<p align="center">Full-stack web app built with React, Tailwind, shadcn/ui, and Supabase. Modern component library with database-backed operations.</p>
+<td width="50%" valign="top">
+
+#### 🎮 Brotato AI
+<a href="https://github.com/guenichone/brotatoai">
+  <img src="https://img.shields.io/badge/GDScript-478CBF?style=flat&logo=godotengine&logoColor=white" />
+  <img src="https://img.shields.io/badge/RL-SB3-red?style=flat" />
+  <img src="https://img.shields.io/github/stars/guenichone/brotatoai?color=yellow" />
+</a>
+
+AI mod for Brotato using Stable-Baselines3. Trains RL agents to play autonomously via Gymnasium environments.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 📦 Barrak Skill Marketplace
+<a href="https://github.com/guenichone/barrak-skill-marketplace">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Claude_Code-Plugin-6366f1?style=flat" />
+</a>
+
+Claude Code plugin marketplace. Ships yt-video-data skill for YouTube transcripts & metadata.
+
+</td>
+<td width="50%" valign="top">
+
+#### 💸 Fund Builder Suite
+<a href="https://github.com/guenichone/fund-builder-suite">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat&logo=supabase&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black" />
+</a>
+
+Full-stack web app built with React, Tailwind, shadcn/ui, and Supabase. Modern component library with DB-backed ops.
+
 </td>
 </tr>
 </table>
-
-</div>
-
----
-
-### 🤝 Let's Connect
-
-<div align="center">
-
-<a href="https://github.com/guenichone"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
-<a href="https://www.linkedin.com/in/emilien-guenichon-9b127629/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-
-</div>
 
 <br />
 
+---
+
 <div align="center">
+
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="28" /> Let's Connect
+
+<br />
+
+<a href="https://github.com/guenichone">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+</a>
+<a href="https://www.linkedin.com/in/emilien-guenichon-9b127629/">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+</a>
+
+<br /><br />
 
 > *"The best way to predict the future is to build it."*
 
