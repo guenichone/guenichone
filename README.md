@@ -85,8 +85,6 @@
 
 Passionate about AI and relentlessly curious about how software gets built. I approach problems with a solution-focused, entrepreneurial mindset — discovering new ideas, sharing what I learn, and improving systems until they're resilient and efficient. My focus: AI evolution in software engineering and large-scale company transformation.
 
-> **Now** — Building MCP servers for enterprise workflows · Optimizing Ornith & Qwen inference on Blackwell · Exploring RL for autonomous agents
-
 ---
 
 <div align="center">
@@ -103,9 +101,9 @@ Passionate about AI and relentlessly curious about how software gets built. I ap
 
 <nobr>
   <a href="https://claude.ai"><img src="https://img.shields.io/badge/Claude_Code-6366f1?style=for-the-badge&logo=claude&logoColor=white" alt="Claude Code" /></a>
-  <a href="https://opencode.ai"><img src="https://img.shields.io/badge/OpenCode-06b6d4?style=for-the-badge&logo=robot&logoColor=white" alt="OpenCode" /></a>
   <a href="https://github.com/ggml-org/llama.cpp"><img src="https://img.shields.io/badge/llama.cpp-FF6B35?style=for-the-badge&logo=llama&logoColor=white" alt="llama.cpp" /></a>
   <a href="https://developer.nvidia.com/cuda-toolkit"><img src="https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="CUDA" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/Baremetal-4E9A06?style=for-the-badge&logo=linux&logoColor=white" alt="Baremetal" /></a>
 </nobr>
 
 </div>
